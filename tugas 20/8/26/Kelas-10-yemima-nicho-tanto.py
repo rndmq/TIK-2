@@ -73,7 +73,7 @@ def langkah_kucing(arah):
 
 print_lama("Informasi arah kucing: U = atas, S = bawah, T = kanan, B = kiri, & HOME untuk berhenti")
 for i in range(loop_pengulangan):
-    arah = input(f"Masukkan perintah-{i + 1}: ")
+    arah = input(f"Masukkan perintah-{i + 1}: ").upper()
     if arah == "HOME":
         break
     else:
