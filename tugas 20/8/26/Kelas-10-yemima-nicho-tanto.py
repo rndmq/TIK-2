@@ -12,6 +12,8 @@ def print_lama(teks, jeda_biasa=0.01, jeda_titik=0.6):
         else:
             time.sleep(jeda_biasa)
     print()
+
+    
 while True:
  try:
   global loop_pengulangan
