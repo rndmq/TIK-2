@@ -91,10 +91,9 @@ def main():
     pesan_dari_bot = ""
     tanya_user_mengenaiBot = ""
 
-
     # OTOMATIS
     if auto:
-      if status == "Menang":
+      if status == "Menang":  
         time.sleep(0.25)
         print_lama("...")
         pesan_dari_bot = "[SYSTEM] kamu menang! Ayo kita lawan diaa"
