@@ -1,0 +1,53 @@
+
+def caesar_cipher(text):
+    result = ""
+    shift = sum(int(char) for char in text if char.isdigit()) or 1
+
+    for char in text:
+        if char.isdigit():
+            continue
+
+        if char.isalpha() and char.isascii():
+            base = ord("A") if char.isupper() else ord("a")
+            result += chr((ord(char) - base + shift) % 26 + base)
+        else:
+            result += char
+
+    return result
+
+def caesar_cipherK(text):
+    result = ""
+    shift = sum(int(char) for char in text if char.isdigit()) or 1
+
+    for char in text:
+        if char.isdigit():
+            continue
+
+        if char.isalpha() and char.isascii():
+            base = ord("A") if char.isupper() else ord("a")
+            result += chr((ord(char) - base - shift) % 26 + base)
+        else:
+            result += char
+
+    return result
+
+
+while True:
+    try: 
+     eord = int(input("MENU:\n1. Encrypt\n2. Decrypt\n:"))
+
+     if eord == 1:
+         huruf = input("Masukkan teks: ")
+         print("Hasil:", caesar_cipher(huruf))
+     else:
+         huruf = input("Masukkan teks: ")
+         print("Hasil:", caesar_cipherK(huruf))
+
+     ask = input("Lanjut? Y/N: ").lower()
+     if ask != "y":
+         print("Terima kasih")
+         break
+    except ValueError:
+      print("Masukkan data yang valid")
+      continue 
+      
